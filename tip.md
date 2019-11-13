@@ -33,3 +33,11 @@ chainWebpack: config => {
     config.plugins.delete('prefetch-admin')
 }
 ```
+
+# vue.js 进行初始化遇到的关于core-js的错误@core-js/modules/es6.array.find-index]
+
+core-js版本太高 
+
+发生原因：cnpm不会根据package-lock.json安装依赖，故会导致直接根据package.json中的core-js: ^2.x.x安装了更高版本
+
+> npm install core-js@2 / cnpm install core-js@2
