@@ -3,6 +3,8 @@
 - echart: 正常柱状图，正常平面饼图，水滴球图等等
 - hightchart: 3d饼图，3d柱状图
 - amchart: 3d柱状饼图(其余的没有必要不用amchart，这个插件还未完善完毕，而且全英文档)
+- d3: 非常高大上的数据处理+图例，太难了
+- antv: 阿里巴巴的
 
 ## echarts水滴球图 demo
 > 先引入 echarts-liquidfill

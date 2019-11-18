@@ -1,6 +1,10 @@
 # 百度地图
 vue-baidu-map
 
+# 快速删除node_modules
+> npm i rimraf -g
+> rimraf node_modules
+
 # geojson
 获得geojson数据
 > http://datav.aliyun.com/static/tools/atlas/#&lat=33.521903996156105&lng=104.29849999999999&zoom=4
