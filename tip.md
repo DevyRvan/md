@@ -13,7 +13,7 @@ vue-baidu-map
 > http://geojson.io/#map=12/35.5724/110.6907
 
 # vue-cli3.0 路由懒加载失效原因
-
+在vue-cli3.0 内默认使用了prefetch
 ## prefetch
 
 ```html
@@ -29,10 +29,22 @@ vue-baidu-map
 
 我们可以在vue.config.js内对prefetch进行删除处理
 
-```Javascipt
+vue-cli3.0还有一个bug
+
+移除 prefetch 插件不能写成以下代码
+```js
 chainWebpack: config => {
     // 移除 prefetch 插件
-    config.plugins.delete('prefetch')
+config.plugins.delete('prefetch')
+}
+```
+
+而要根据xxx.index的名称去删除
+
+```js
+chainWebpack: config => {
+    // 移除 prefetch 插件
+    config.plugins.delete('prefetch-xxx')
     config.plugins.delete('prefetch-index')
     config.plugins.delete('prefetch-admin')
 }
@@ -49,3 +61,37 @@ core-js版本太高
 # 移动端UI组件
 Mint UI  饿了么组件
 Nut UI 京东组件
+
+# 如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?
+```js
+function commafy(num){
+  return num && num
+    .toString()
+    .replace(/(\d)(?=(\d{3})+\.)/g, function($1, $2){
+      return $2 + ',';
+    });
+}
+```
+
+# 前端学习网站推荐
+1. 极客标签：     http://www.gbtags.com/
+
+2. 码农周刊：     http://weekly.manong.io/issues/
+
+3. 前端周刊：     http://www.feweekly.com/issues
+
+4. 慕课网：       http://www.imooc.com/
+
+5. div.io：       http://div.io
+
+6. Hacker News： https://news.ycombinator.com/news
+
+7. InfoQ：       http://www.infoq.com/
+
+8. w3cplus：     http://www.w3cplus.com/
+
+9. Stack Overflow： http://stackoverflow.com/
+
+10. w3school：    http://www.w3school.com.cn/
+
+11. mozilla：     https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
