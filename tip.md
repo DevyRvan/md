@@ -34,8 +34,8 @@ vue-cli3.0还有一个bug
 移除 prefetch 插件不能写成以下代码
 ```js
 chainWebpack: config => {
-    // 移除 prefetch 插件
-config.plugins.delete('prefetch')
+  // 移除 prefetch 插件
+  config.plugins.delete('prefetch')
 }
 ```
 
@@ -43,10 +43,10 @@ config.plugins.delete('prefetch')
 
 ```js
 chainWebpack: config => {
-    // 移除 prefetch 插件
-    config.plugins.delete('prefetch-xxx')
-    config.plugins.delete('prefetch-index')
-    config.plugins.delete('prefetch-admin')
+  // 移除 prefetch 插件
+  config.plugins.delete('prefetch-xxx')
+  config.plugins.delete('prefetch-index')
+  config.plugins.delete('prefetch-admin')
 }
 ```
 
