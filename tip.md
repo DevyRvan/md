@@ -1,20 +1,22 @@
-# 百度地图
+# tip
+
+## 百度地图
 vue-baidu-map
 
-# 快速删除node_modules
+## 快速删除node_modules
 > npm i rimraf -g
 > rimraf node_modules
 
-# geojson
+## geojson
 获得geojson数据
 > http://datav.aliyun.com/static/tools/atlas/#&lat=33.521903996156105&lng=104.29849999999999&zoom=4
 
 绘制geojson
 > http://geojson.io/#map=12/35.5724/110.6907
 
-# vue-cli3.0 路由懒加载失效原因
+## vue-cli3.0 路由懒加载失效原因
 在vue-cli3.0 内默认使用了prefetch
-## prefetch
+### prefetch
 
 ```html
 <link rel="prefetch" ></link>
@@ -50,7 +52,7 @@ chainWebpack: config => {
 }
 ```
 
-# vue.js 进行初始化遇到的关于core-js的错误@core-js/modules/es6.array.find-index]
+## vue.js 进行初始化遇到的关于core-js的错误@core-js/modules/es6.array.find-index]
 
 core-js版本太高 
 
@@ -58,11 +60,12 @@ core-js版本太高
 
 > npm install core-js@2 / cnpm install core-js@2
 
-# 移动端UI组件
+## 移动端UI组件
 Mint UI  饿了么组件
 Nut UI 京东组件
 
-# 如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?
+## 算法小技巧
+### 如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?
 ```js
 function commafy(num){
   return num && num
@@ -73,7 +76,7 @@ function commafy(num){
 }
 ```
 
-# 前端学习网站推荐
+## 前端学习网站推荐
 1. 极客标签：     http://www.gbtags.com/
 
 2. 码农周刊：     http://weekly.manong.io/issues/
@@ -95,3 +98,6 @@ function commafy(num){
 10. w3school：    http://www.w3school.com.cn/
 
 11. mozilla：     https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
+
+## 打包成桌面软件
+nwjs

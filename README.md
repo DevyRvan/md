@@ -1,6 +1,8 @@
 # md
 来自一个小小前端的笔记仓库
+
 技术栈： vue vue-cli3.0 webpack npm nodejs koa2 element-ui
+
 由于本人用的脚手架是vue-cli3.0,所以有关webpack的配置都是关于cli3.0写的
 
 ## tip
@@ -12,6 +14,9 @@
 - vue-cli3.0 路由懒加载失效原因
 - vue.js 进行初始化遇到的关于core-js的错误
 - 移动端的UI组件
+- 算法小技巧
+- 前端学习网站推荐
+- 打包成桌面软件
 
 ## cordova
 可以将你写的 Web 程序包裹进原生的 APP 壳中，也就是我们常说的 Hybrid APP （混合应用）。
