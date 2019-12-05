@@ -101,3 +101,6 @@ function commafy(num){
 
 ## 打包成桌面软件
 nwjs
+
+## v-waves
+element 指令waves 水波纹效果
