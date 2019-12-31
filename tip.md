@@ -63,6 +63,7 @@ core-js版本太高
 ## 移动端UI组件
 Mint UI  饿了么组件
 Nut UI 京东组件
+vant-ui https://youzan.github.io/vant/#/zh-CN/intro
 
 ## 算法小技巧
 ### 如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?
@@ -104,3 +105,60 @@ nwjs
 
 ## v-waves
 element 指令waves 水波纹效果
+
+## 拒绝别人用F12看你代码
+```js
+(function noDebuger() {
+    function testDebuger() {
+        var d = new Date();
+        // test();
+        debugger;
+        if (new Date() - d > 10) {
+            document.body.innerHTML = "<h1>年轻人，不要太好奇</h1>";
+            return true;
+        }
+        return false;
+    }
+
+    function start() {
+        while (testDebuger()) {
+            testDebuger();
+        }
+    }
+    if (!testDebuger()) {
+        window.onblur = function () {
+            setTimeout(function () {
+                start();
+            }, 500);
+        };
+    } else {
+        start();
+    }
+})();
+```
+
+## vue-grid-layout
+vue-grid-layout是一个类似于Gridster的栅格布局系统, 适用于Vue.js。
+
+https://github.com/jbaysolutions/vue-grid-layout/blob/master/README-zh_CN.md
+
+### 特性
+- 可拖拽
+- 可调整大小
+- 静态部件（不可拖拽、调整大小）
+- 拖拽和调整大小时进行边界检查
+- 增减部件时避免重建栅格
+- 可序列化和还原的布局
+- 自动化 RTL 支持
+- 响应式
+
+
+## 流程图工具
+https://github.com/bpmn-io/bpmn-js
+
+https://github.com/bpmn-io/vue-bpmn
+
+vue-flowchart
+
+## canvas
+https://codepen.io/ 
