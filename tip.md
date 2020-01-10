@@ -64,6 +64,7 @@ core-js版本太高
 Mint UI  饿了么组件
 Nut UI 京东组件
 vant-ui https://youzan.github.io/vant/#/zh-CN/intro
+weex UI 阿里组件
 
 ## 算法小技巧
 ### 如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?
@@ -162,3 +163,11 @@ vue-flowchart
 
 ## canvas
 https://codepen.io/ 
+
+## terser-webpack-plugin
+清除console
+
+## el-input 限制只能输入数字
+```html
+<el-input v-model.number="num" oninput="value=value.replace(/[^\d.]/g,'');"></el-input>
+```
