@@ -41,7 +41,7 @@ chainWebpack: config => {
 }
 ```
 
-而要根据xxx.index的名称去删除
+而要根据xxx.html的名称去删除
 
 ```js
 chainWebpack: config => {
@@ -65,6 +65,7 @@ Mint UI  饿了么组件
 Nut UI 京东组件
 vant-ui https://youzan.github.io/vant/#/zh-CN/intro
 weex UI 阿里组件
+weui 微信小程序组件
 
 ## 算法小技巧
 ### 如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?
@@ -170,4 +171,16 @@ https://codepen.io/
 ## el-input 限制只能输入数字
 ```html
 <el-input v-model.number="num" oninput="value=value.replace(/[^\d.]/g,'');"></el-input>
+```
+
+## vue 监控 element元素大小
+element-resize-detector
+
+## 预览excel跟word文档
+Excel: SheetJS
+Word: mammoth.js
+
+当然，如果你的文档都是公网可以访问的，可以用微软提供的在线预览
+```html
+<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://remote.url.tld/path/to/document.doc' width='1366px' height='623px' frameborder='0'>This is an embedded <a target='_blank' href='http://office.com'>Microsoft Office</a> document, powered by <a target='_blank' href='http://office.com/webapps'>Office Online</a>.</iframe>
 ```
