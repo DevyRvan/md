@@ -187,3 +187,8 @@ Word: mammoth.js
 
 ## 微前端构架 
 icejs
+umi
+https://alili.tech/
+
+## webpack打包压缩
+gz
