@@ -1,7 +1,7 @@
 # react
 用于构建用户界面的 JavaScript 库  https://react.docschina.org/
 
-## 模板
+## 模板 
 ```js
 import React, { Component } from 'react'
 import { Tabs, List, Button } from 'antd'
