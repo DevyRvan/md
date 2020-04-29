@@ -192,5 +192,13 @@ https://alili.tech/
 
 https://github.com/F-loat/vue-cli-plugin-qiankun
 
+飞冰：https://ice.work/docs/icestark/about
+
+umijs，微件化实现微前端
+
 ## webpack打包压缩
 gz
+
+
+## webpack 开发环境运行速度
+ babel-plugin-dynamic-import-node

@@ -8,89 +8,89 @@ import { Tabs, List, Button } from 'antd'
 import '@/assets/css/news.less'
 const { TabPane } = Tabs
 const news = [
-	{
-		title: '【系统通知】该系统将于今晚凌晨2点到5点进行升级维护。',
-		createTime: '2018-04-19 20:00:00',
-		status: 0, //0==>未读，1==>已读
-		id: 0
-	},
-	{
-		title: '本系统于2088年0:00:00下线！',
-		createTime: '2018-12-29 00:00:00',
-		status: 1,
-		id: 3
-	}
+  {
+    title: '【系统通知】该系统将于今晚凌晨2点到5点进行升级维护。',
+    createTime: '2018-04-19 20:00:00',
+    status: 0, //0==>未读，1==>已读
+    id: 0
+  },
+  {
+    title: '本系统于2088年0:00:00下线！',
+    createTime: '2018-12-29 00:00:00',
+    status: 1,
+    id: 3
+  }
 ];
 class News extends Component {
   constructor(props) {
-		super(props)
-	}
-	state = { loading: false, dataSource: [] };
-	componentDidMount() { // 生命周期
-		this.setState({ loading: true });
-		setTimeout(() => {
-			this.setState({ loading: false, dataSource: news.filter(item => item.status === 0) });
-		}, 500);
-	}
-	handleChangeTab = key => { // public class fields 语法 不同与 handleChangeTab(key)
-		if (parseInt(key) === 1) {
-			this.setState({ dataSource: news.filter(item => item.status === 0) });
-		} else if (parseInt(key) === 2) {
-			this.setState({ dataSource: news.filter(item => item.status === 1) });
-		}
-	};
+    super(props)
+  }
+  state = { loading: false, dataSource: [] };
+  componentDidMount() { // 生命周期
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false, dataSource: news.filter(item => item.status === 0) });
+    }, 500);
+  }
+  handleChangeTab = key => { // public class fields 语法 不同与 handleChangeTab(key)
+    if (parseInt(key) === 1) {
+      this.setState({ dataSource: news.filter(item => item.status === 0) });
+    } else if (parseInt(key) === 2) {
+      this.setState({ dataSource: news.filter(item => item.status === 1) });
+    }
+  };
 
-	render() {
-		const { loading, dataSource } = this.state;
-		return (
-			<div className="shadow-radius">
-				<Tabs defaultActiveKey="1" onChange={this.handleChangeTab}>
-					<TabPane tab="未读消息" key="1">
-						<List
-							loading={loading}
-							className="list-news"
-							footer={
-								<div>
-									<Button type="primary">全部标为已读</Button>
-								</div>
-							}
-							dataSource={dataSource}
-							renderItem={item => (
-								<List.Item key={item.id}>
-									<div className="list-title">
-										<span style={{ color: '#1890ff', cursor: 'pointer' }}>{item.title}</span>
-									</div>
-									<div className="list-time">{item.createTime}</div>
-									<Button>标为已读</Button>
-								</List.Item>
-							)}
-						/>
-					</TabPane>
-					<TabPane tab="已读消息" key="2">
-						<List
-							loading={loading}
-							className="list-news"
-							footer={
-								<div>
-									<Button type="danger">删除全部</Button>
-								</div>
-							}
-							dataSource={dataSource}
-							renderItem={item => (
-								<List.Item key={item.id}>
-									<div className="list-title">
-										<span>{item.title}</span>
-									</div>
-									<div className="list-time">{item.createTime}</div>
-									<Button type="danger">删除</Button>
-								</List.Item>
-							)}
-						/>
-					</TabPane>
-				</Tabs>
-			</div>
-		);
-	}
+  render() {
+    const { loading, dataSource } = this.state;
+    return (
+      <div className="shadow-radius">
+        <Tabs defaultActiveKey="1" onChange={this.handleChangeTab}>
+          <TabPane tab="未读消息" key="1">
+            <List
+              loading={loading}
+              className="list-news"
+              footer={
+                <div>
+                  <Button type="primary">全部标为已读</Button>
+                </div>
+              }
+              dataSource={dataSource}
+              renderItem={item => (
+                <List.Item key={item.id}>
+                  <div className="list-title">
+                    <span style={{ color: '#1890ff', cursor: 'pointer' }}>{item.title}</span>
+                  </div>
+                  <div className="list-time">{item.createTime}</div>
+                  <Button>标为已读</Button>
+                </List.Item>
+              )}
+            />
+          </TabPane>
+          <TabPane tab="已读消息" key="2">
+            <List
+              loading={loading}
+              className="list-news"
+              footer={
+                <div>
+                  <Button type="danger">删除全部</Button>
+                </div>
+              }
+              dataSource={dataSource}
+              renderItem={item => (
+                <List.Item key={item.id}>
+                  <div className="list-title">
+                    <span>{item.title}</span>
+                  </div>
+                  <div className="list-time">{item.createTime}</div>
+                  <Button type="danger">删除</Button>
+                </List.Item>
+              )}
+            />
+          </TabPane>
+        </Tabs>
+      </div>
+    );
+  }
 }
 export default News
 ```
@@ -115,13 +115,13 @@ import React from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import Login from '@/views/Login'
 const Router = () => {
-	return (
-		<HashRouter>
-			<Switch>
-				<Route component={Login} exact path="/login" />
-			</Switch>
-		</HashRouter>
-	)
+  return (
+    <HashRouter>
+      <Switch>
+        <Route component={Login} exact path="/login" />
+      </Switch>
+    </HashRouter>
+  )
 }
 
 export default Router
@@ -151,7 +151,7 @@ store.js
 import { createStore,/* applyMiddleware, compose*/ } from 'redux'
 import reducers from './reducers/index'
 const store = createStore(
-	reducers
+  reducers
 )
 export default store
 ```
@@ -162,13 +162,13 @@ import { Provider } from 'react-redux'
 import Router from './router/index'
 import store from '@/redux/store'
 class App extends React.Component {
-	render() {
-		return (
-			<Provider store={store}>
-				<Router />
-			</Provider>
-		);
-	}
+  render() {
+    return (
+      <Provider store={store}>
+        <Router />
+      </Provider>
+    );
+  }
 }
 export default App;
 ```
@@ -178,8 +178,8 @@ import { connect } from 'react-redux'
 
 class Login extends Component {
   constructor(props) {
-		super(props)
-	}
+    super(props)
+  }
   login() {
     ...
     this.props.setUserInfo()
@@ -187,13 +187,13 @@ class Login extends Component {
 }
 const mapStateToProps = state => state
 const mapDispatchToProps = dispatch => ({
-	setUserInfo: data => {
-		dispatch(setUserInfo(data))
-	}
+  setUserInfo: data => {
+    dispatch(setUserInfo(data))
+  }
 })
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Login)
 ```
 
