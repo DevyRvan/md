@@ -201,4 +201,10 @@ gz
 
 
 ## webpack 开发环境运行速度
- babel-plugin-dynamic-import-node
+babel-plugin-dynamic-import-node
+
+## nodejs简易本地发布环境
+> npm install serve -g
+在目录下（比如dist）：
+> serve
+默认运行在 localhost:5000
